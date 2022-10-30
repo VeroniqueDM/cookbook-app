@@ -1,0 +1,33 @@
+{
+  "0": {
+    "id": "1",
+    "text": "Clean the room",
+    "isDone": "false"
+  },
+  "1": {
+    "id": "2",
+    "text": "Wash the dishes",
+    "isDone": "false"
+  },
+  "2": {
+    "id": "3",
+    "text": "Do the shoppin",
+    "isDone": "false"
+  },
+  "3": {
+    "id": "4",
+    "text": "Clean the room",
+    "isDone": "false" 
+  },
+  "4": {
+    "id": "5",
+    "text": "Wash the dishes",
+    "isDone": "false"
+  },
+  "5": {
+    "id": "6",
+    "text": "Do the shoppin",
+    "isDone": "false"
+  }
+  
+}

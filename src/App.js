@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import NavbarComponent from './components/NavbarComponent/NavbarComponent';
+import HeroSection from './components/HeroSection/HeroSection';
+import { Route, Routes } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavbarComponent/>
+    <main className="" id="main-collapse">
+    <Routes>
+                {/* <Route path="/dashboard/*" element={<Dashboard />} /> */}
+             
+                <Route path="/details/:recipeId" element={<RecipeDetails />} />
+                <Route path="/" element={ <HeroSection/>} />
+
+            
+              </Routes>
+   
+    
+</main>
+<script type="text/javascript" src="./main.85741bff.js"></script>
+    </>
   );
 }
 

@@ -1,0 +1,50 @@
+{
+    "0": {
+        "id": "1",
+        "img": "./assets/images/img-04.jpg",
+        "ingredients": "¾ cup balsamic vinegar ",
+        "text": "After washing basil and tomatoes, blot them dry with clean paper towel.",
+        "title": "GRILLED BASIL CHICKEN"
+    },
+    "1": {
+        "id": "2",
+        "img": "./assets/images/img-05.jpg",
+        "ingredients": "1 ½ – 2 lbs chicken leg quarters, 1 tsp sugar",
+
+        "text": "orange quote icon Wash hands with soap and water. In large skillet over medium high-heat, warm 2 tablespoons olive oil. Season leg quarters with ½ teaspoon salt and ½ teaspoon black pepper; orange quote icon do not rinse raw poultry.",
+
+        "title": "MOROCCAN CHICKEN WITH EGGPLANT-ZUCCHINI RAGOUT"
+    },
+    "2": {
+      "id": "3",
+      "img": "./assets/images/img-10.jpg",
+      "ingredients": "¾ cup balsamic vinegar ",
+      "text": "After washing basil and tomatoes, blot them dry with clean paper towel.",
+      "title": "GRILLED BASIL CHICKEN"
+  },
+  "3": {
+      "id": "4",
+      "img": "./assets/images/img-06.jpg",
+      "ingredients": "1 ½ – 2 lbs chicken leg quarters, 1 tsp sugar",
+
+      "text": "orange quote icon Wash hands with soap and water. In large skillet over medium high-heat, warm 2 tablespoons olive oil. Season leg quarters with ½ teaspoon salt and ½ teaspoon black pepper; orange quote icon do not rinse raw poultry.",
+
+      "title": "MOROCCAN CHICKEN WITH EGGPLANT-ZUCCHINI RAGOUT"
+  },
+  "4": {
+    "id": "5",
+    "img": "./assets/images/img-11.jpg",
+    "ingredients": "¾ cup balsamic vinegar ",
+    "text": "After washing basil and tomatoes, blot them dry with clean paper towel.",
+    "title": "GRILLED BASIL CHICKEN"
+},
+"5": {
+    "id": "6",
+    "img": "./assets/images/img-03.jpg",
+    "ingredients": "1 ½ – 2 lbs chicken leg quarters, 1 tsp sugar",
+
+    "text": "orange quote icon Wash hands with soap and water. In large skillet over medium high-heat, warm 2 tablespoons olive oil. Season leg quarters with ½ teaspoon salt and ½ teaspoon black pepper; orange quote icon do not rinse raw poultry.",
+
+    "title": "MOROCCAN CHICKEN WITH EGGPLANT-ZUCCHINI RAGOUT"
+}
+}
