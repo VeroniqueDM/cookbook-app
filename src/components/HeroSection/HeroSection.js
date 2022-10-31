@@ -33,8 +33,8 @@ const HeroSection = () => {
                 ) 
                 : 
                 // <GrowSpinner />
-                <div class="loader_bg">
-         <div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
+                <div className="loader_bg">
+         <div className="loader"><img src="assets/images/loading.gif" alt="#" /></div>
       </div>
                 // <h1 className="no-recipes">No recipes in database!</h1>
                 
