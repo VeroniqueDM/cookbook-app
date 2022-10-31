@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function GridItem({ recipe }) {
+const RecipeCard = ({ recipe }) => {
     return (
         <div className="grid-item">
             <img className="img-responsive" alt="" src={recipe.imageUrl} />
@@ -14,4 +14,6 @@ export default function GridItem({ recipe }) {
             </Link>
         </div>
     );
-}
+};
+
+export default RecipeCard;

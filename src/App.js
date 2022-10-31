@@ -13,6 +13,7 @@ import Notification from './components/Common/Notification';
 import GuardedRoute from './components/Common/GuardedRoute';
 import Create from './components/Create';
 import Logout from './components/Logout/Logout';
+import Edit from './components/Edit/Edit';
 // import Edit from './components/Edit';
 function App() {
   return (
@@ -30,11 +31,12 @@ function App() {
                 <Route path="/login" element={ <Login/>} />
                 <Route path="/logout" element={ <Logout/>} />
                 <Route path="/register" element={ <Register/>} />
+                <Route path="/details/:recipeId" element={<RecipeDetails />} />
+
                 <Route element={<GuardedRoute />}>
                   <Route path="/create" element={<Create />} />
-                  {/* <Route path="/edit/:petId" element={<Edit />} /> */}
+                  <Route path="/edit/:recipeId" element={<Edit/>} />
                 </Route>
-                <Route path="/details/:recipeId" element={<RecipeDetails />} />
 
             
               </Routes>

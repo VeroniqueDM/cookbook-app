@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
 import * as recipeService from '../../services/recipeService';
-import GrowSpinner from "../Spinner";
-import GridItem from "./GridItem";
+import RecipeList from "../RecipeList/RecipeList";
 
 const HeroSection = () => {
     const [recipes, setRecipes] = useState([]);
@@ -10,7 +8,6 @@ const HeroSection = () => {
     useEffect(() => {
         recipeService.getAll()
             .then(result => {
-                console.log(result)
                 setRecipes(result);
             })
             .catch(err => {
@@ -24,21 +21,9 @@ const HeroSection = () => {
   <div className="gutter-sizer"></div>
     <div className="grid-sizer"></div>
     <h1>Top Recipes</h1>
-    {recipes.length > 0
-                ? (
-                    <div  style={{display: "inline-flex", flexWrap: "wrap"}}
-                    >
-                        {recipes.map(x => <GridItem key={x.id} recipe={x} />)}
-                    </div>
-                ) 
-                : 
-                // <GrowSpinner />
-                <div className="loader_bg">
-         <div className="loader"><img src="assets/images/loading.gif" alt="#" /></div>
-      </div>
-                // <h1 className="no-recipes">No recipes in database!</h1>
-                
-            }
+   <section>
+   <RecipeList recipes={recipes} />
+   </section>
     
     
   </div>
