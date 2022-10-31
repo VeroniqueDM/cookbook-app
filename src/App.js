@@ -12,7 +12,8 @@ import { NotificationProvider } from './contexts/NotificationContext'
 import Notification from './components/Common/Notification';
 import GuardedRoute from './components/Common/GuardedRoute';
 import Create from './components/Create';
-import Edit from './components/Edit';
+import Logout from './components/Logout/Logout';
+// import Edit from './components/Edit';
 function App() {
   return (
     <>
@@ -27,10 +28,11 @@ function App() {
                 {/* <Route path="/dashboard/*" element={<Dashboard />} /> */}
                 <Route path="/" element={ <HeroSection/>} />
                 <Route path="/login" element={ <Login/>} />
+                <Route path="/logout" element={ <Logout/>} />
                 <Route path="/register" element={ <Register/>} />
                 <Route element={<GuardedRoute />}>
                   <Route path="/create" element={<Create />} />
-                  <Route path="/edit/:petId" element={<Edit />} />
+                  {/* <Route path="/edit/:petId" element={<Edit />} /> */}
                 </Route>
                 <Route path="/details/:recipeId" element={<RecipeDetails />} />
 
