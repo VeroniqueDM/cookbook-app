@@ -4,11 +4,13 @@ const RecipeList = ({ recipes }) => {
     return (
         <>
           
-            <div style={{ display: "inline-flex", flexWrap: "wrap" }}>
+            <div
+            //  style={{ display: "inline-flex", flexWrap: "wrap" }}
+             >
                 {
                     recipes.length > 0 
                     ? (
-                        <ul>
+                        <ul style={{ display: "inline-flex", flexWrap: "wrap" }}>
                             {recipes.map(x => 
                                 <RecipeCard key={x._id} recipe={x} />
                             )}

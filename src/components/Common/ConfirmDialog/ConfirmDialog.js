@@ -4,20 +4,21 @@ const ConfirmDialog = ({
     show,
     onClose,
     onSave,
+    confirmationText
 }) => {
     return (
         <Modal show={show} onHide={onClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Modal title</Modal.Title>
+                <Modal.Title>{confirmationText.title}</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
-                <p>Modal body text goes here.</p>
+                <p>{confirmationText.body}</p>
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="secondary" onClick={onClose}>Close</Button>
-                <Button variant="primary" onClick={onSave}>Save changes</Button>
+                <Button variant="secondary" onClick={onClose}>{confirmationText.close}</Button>
+                <Button variant="primary" onClick={onSave}>{confirmationText.confirm}</Button>
             </Modal.Footer>
         </Modal>
     );

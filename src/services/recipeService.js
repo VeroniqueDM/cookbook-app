@@ -43,3 +43,9 @@ export const getMyRecipes = (ownerId) => {
 
     return request.get(`${baseUrl}/recipes?where=${query}`);
 };
+
+export const getSortedRecipes = () => {
+    // let query = encodeURIComponent(`likes desc`);
+
+    return request.get(`${baseUrl}/recipes?sortBy=_createdOn%20desc}`);
+};

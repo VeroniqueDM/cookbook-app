@@ -16,6 +16,7 @@ import Logout from './components/Logout/Logout';
 import Edit from './components/Edit/Edit';
 import PrivateRoute from './components/Common/PrivateRoute';
 import MyRecipes from './components/MyRecipes/MyRecipes';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
     <NavbarComponent/>
     <Notification />
 
-    <main className="" id="main-collapse">
+    <main className="" id="site-content">
     <Routes>
-                {/* <Route path="/dashboard/*" element={<Dashboard />} /> */}
+                <Route path="/dashboard/*" element={<Dashboard />} />
                 <Route path="/" element={ <HeroSection/>} />
                 <Route path="/login" element={ <Login/>} />
                 <Route path="/logout" element={ <Logout/>} />
@@ -47,10 +48,11 @@ function App() {
    
     
 </main>
+
  </NotificationProvider>
       </AuthProvider>
     </ErrorBoundary>
-<script type="text/javascript" src="./main.85741bff.js"></script>
+{/* <script type="text/javascript" src="./main.85741bff.js"></script> */}
     </>
   );
 }

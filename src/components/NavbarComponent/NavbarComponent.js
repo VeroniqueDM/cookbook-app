@@ -7,10 +7,10 @@ const NavbarComponent = () => {
 
   let guestNavigation = (
      <>
-      <li> <Link className="button" to="/login">Login</Link></li>
+      <li> <Link  to="/login">Login</Link></li>
 
 <li>
-<Link to="/register" className="button">Register</Link>
+<Link to="/register" >Register</Link>
 
 </li></>
   );
@@ -20,11 +20,11 @@ const NavbarComponent = () => {
          <>
          <li> <Link  to="/my-recipes">My Recipes</Link></li>
 <li>
-<Link className="button" to="/create">Add Recipe</Link>
+<Link  to="/create">Add Recipe</Link>
 
 </li>
           <li>
-          <Link className="button" to="/logout">Logout</Link>
+          <Link  to="/logout">Logout</Link>
           </li></>
   );
     return (

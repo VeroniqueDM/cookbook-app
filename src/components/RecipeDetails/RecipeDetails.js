@@ -15,7 +15,6 @@ const Details = () => {
     const { user } = useAuthContext();
     const { addNotification } = useNotificationContext();
     const { recipeId } = useParams();
-    console.log(recipeId)
     const [recipe, setRecipe] = useRecipeState(recipeId);
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
     console.log(recipe)
@@ -70,12 +69,44 @@ const Details = () => {
     };
 
     const userButtons = <Button onClick={likeButtonClick} disabled={recipe.likes?.includes(user._id)}>Like</Button>;
-
+    const datePosted = (new Date(recipe._createdOn )).toLocaleString()
+    const confirmationText = {
+        title: 'Attention!',
+        body: 'Are you sure you want to delete this recipe?',
+        close: 'Cancel',
+        confirm: "Delete"
+    }
+    console.log(recipe.likes)
     return (
         <>
-            <ConfirmDialog show={showDeleteDialog} onClose={() => setShowDeleteDialog(false)} onSave={deleteHandler} />
+            <ConfirmDialog show={showDeleteDialog} confirmationText={confirmationText} onClose={() => setShowDeleteDialog(false)} onSave={deleteHandler} />
             <section id="details-page" className="details">
-                <div className="recipe-information">
+            <div className="row">
+			<div className="col-lg-8">
+
+				<img className="img-fluid rounded" src={recipe.imageUrl} alt="recipeImage" />
+               
+				<hr/>
+					<p>Posted on {datePosted}</p>
+                    <div className="actions">
+                        {user._id && (user._id == recipe._ownerId
+                            ? ownerButtons
+                            : userButtons
+                        )}
+<hr />
+                        <div className="likes">
+                            <img className="hearts" src="/images/heart.png" />
+                            <span id="total-likes">Likes: {recipe.likes?.length || 0}</span>
+                        </div>
+                    </div>
+                <hr />
+				<p className="lead">{recipe.description}</p>
+
+
+                </div>
+
+</div>
+                {/* <div className="recipe-information">
                     <h3>Name: {recipe.name}</h3>
                     <p className="type">Type: {recipe.type}</p>
                     <p className="img"><img src={recipe.imageUrl} /></p>
@@ -94,7 +125,7 @@ const Details = () => {
                 <div className="recipe-description">
                     <h3>Description:</h3>
                     <p>{recipe.description}</p>
-                </div>
+                </div> */}
             </section>
         </>
     );
