@@ -36,3 +36,10 @@ export const destroy = (recipeId, token) => {
         },
     }).then((res) => res.json());
 };
+
+
+export const getMyRecipes = (ownerId) => {
+    let query = encodeURIComponent(`_ownerId="${ownerId}"`);
+
+    return request.get(`${baseUrl}/recipes?where=${query}`);
+};

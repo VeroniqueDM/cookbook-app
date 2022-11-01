@@ -14,7 +14,9 @@ import GuardedRoute from './components/Common/GuardedRoute';
 import Create from './components/Create';
 import Logout from './components/Logout/Logout';
 import Edit from './components/Edit/Edit';
-// import Edit from './components/Edit';
+import PrivateRoute from './components/Common/PrivateRoute';
+import MyRecipes from './components/MyRecipes/MyRecipes';
+
 function App() {
   return (
     <>
@@ -31,6 +33,8 @@ function App() {
                 <Route path="/login" element={ <Login/>} />
                 <Route path="/logout" element={ <Logout/>} />
                 <Route path="/register" element={ <Register/>} />
+                <Route path="/my-recipes" element={<PrivateRoute><MyRecipes /></PrivateRoute>} />
+
                 <Route path="/details/:recipeId" element={<RecipeDetails />} />
 
                 <Route element={<GuardedRoute />}>
